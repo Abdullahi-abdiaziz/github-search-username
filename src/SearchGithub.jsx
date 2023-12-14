@@ -108,7 +108,7 @@ function GitHubSearch() {
             />
           </div>
           <div className="profile__account">
-            <div className="account__user df">
+            <div className="account__user">
               <div className="user__name">
                 <h3 className="name__full">
                   {user.name ? user.name : "Anomous User"}
