@@ -67,7 +67,7 @@ function GitHubSearch() {
   return (
     <div className="github-search">
       <header className="search-header df">
-        <h1 className="header__title">devFinder</h1>
+        <h1 className="header__title">devfinder</h1>
         <div className="header__mode df">
           <button
             className="mode__btn df"
