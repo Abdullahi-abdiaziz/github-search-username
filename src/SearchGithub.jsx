@@ -66,9 +66,9 @@ function GitHubSearch() {
 
   return (
     <div className="github-search">
-      <header className="search-header ">
+      <header className="search-header df">
         <h1 className="header__title">devFinder</h1>
-        <div className="header__mode">
+        <div className="header__mode df">
           <button
             style={{ transition: ".3s ease" }}
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -84,7 +84,7 @@ function GitHubSearch() {
           </button>
         </div>
       </header>
-      <form className="search-form">
+      <form className="search-form df">
         <span className="icon-search icon"></span>
         <input
           type="text"
@@ -99,7 +99,7 @@ function GitHubSearch() {
       </form>
 
       {user.username ? (
-        <div className="github-profile">
+        <div className="github-profile df">
           <div className="profile__avatar">
             <img
               src={user.avatar_url}
@@ -108,7 +108,7 @@ function GitHubSearch() {
             />
           </div>
           <div className="profile__account">
-            <div className="account__user">
+            <div className="account__user df">
               <div className="user__name">
                 <h3 className="name__full">
                   {user.name ? user.name : "Anomous User"}
@@ -120,7 +120,7 @@ function GitHubSearch() {
             <p className="account__bio">
               {user.bio ? user.bio : "This profile has no bio"}
             </p>
-            <div className="account__status">
+            <div className="account__status df">
               <div className="account__repos">
                 <p>Repos</p>
                 <span className="repos__no">{user.repos}</span>

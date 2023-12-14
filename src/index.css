@@ -31,6 +31,9 @@ button {
 .light-clr {
   color: var(--light);
 }
+.df {
+  display: flex;
+}
 
 html {
   font-family: "IBM Plex Mono", sans-serif;
