@@ -1,4 +1,3 @@
-
 /*
  ** ======== Content ======= /
  ** 1. Header
@@ -147,7 +146,7 @@
 }
 /* ** 5. User Repos and Followers **  */
 .profile__account .account__status {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -156,12 +155,16 @@
   border-radius: 4px;
 }
 
+.account__status p {
+  font-weight: 500;
+}
+
 .account__status span {
   text-align: center;
   display: block;
   margin-top: 5px;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 /* ** 6. User Additional info **  */
 .profile__account .account__info {
@@ -194,7 +197,7 @@
     max-width: 375px;
     width: 100%;
   }
-  
+
   .profile__account .account__user {
     width: auto;
     flex-direction: column;
@@ -206,12 +209,12 @@
   .profile__avatar {
     margin-bottom: 1.5rem;
   }
-  
+
   .account__user .profile__joined-date {
     margin-left: 0rem;
     margin-top: 0.5rem;
   }
-  
+
   .github-profile {
     display: block;
     position: relative;

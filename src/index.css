@@ -10,12 +10,11 @@
 }
 
 .light {
-  --dark-blue: rgb(255, 255, 255); /* Light background color */
-  --light-blue: rgb(240, 240, 240); /* Lighter blue color for elements */
-  --white: rgb(20, 28, 47); /* Dark text color */
-  --light: rgba(20, 28, 47, 0.5); /* Semi-transparent dark color */
-  --light-2: rgba(20, 28, 47, 0.75); /* More transparent dark color */
-  --accent: rgb(0, 112, 254); /* Accent color */
+  --dark-blue: rgb(255, 255, 255); 
+  --light-blue: rgb(240, 240, 240); 
+  --white: rgb(20, 28, 47); 
+  --light: rgba(20, 28, 47, 0.5);
+  --light-2: rgba(20, 28, 47, 0.75); 
 }
 
 * {
@@ -24,35 +23,13 @@
   box-sizing: border-box;
 }
 
-a {
-  all: unset;
-}
-
 button {
   all: unset;
   cursor: pointer;
 }
 
-.bkg-dark {
-  background-color: var(--dark-blue);
-}
-
-.bkg-ligth {
-  background-color: var(--light-blue);
-}
-
-.txt-clr {
-  color: var(--white);
-}
 .light-clr {
   color: var(--light);
-}
-.bkg-accent {
-  background-color: var(--accent);
-}
-
-.accent-clr {
-  color: var(--accent);
 }
 
 html {
