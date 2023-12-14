@@ -70,7 +70,7 @@ function GitHubSearch() {
         <h1 className="header__title">devFinder</h1>
         <div className="header__mode df">
           <button
-            style={{ transition: ".3s ease" }}
+            className="mode__btn df"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             <span style={{ marginRight: ".5rem" }} className="mode__type">
@@ -99,7 +99,7 @@ function GitHubSearch() {
       </form>
 
       {user.username ? (
-        <div className="github-profile df">
+        <div className="github-profile">
           <div className="profile__avatar">
             <img
               src={user.avatar_url}
@@ -108,7 +108,7 @@ function GitHubSearch() {
             />
           </div>
           <div className="profile__account">
-            <div className="account__user">
+            <div className="account__user df">
               <div className="user__name">
                 <h3 className="name__full">
                   {user.name ? user.name : "Anomous User"}

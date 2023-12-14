@@ -35,6 +35,11 @@
   gap: 0.75rem;
 }
 
+.mode__btn {
+  align-items: center;
+  transition: ".3s ease";
+}
+
 /* ** 2. User Search Bar **  */
 .search-form {
   width: 530px;
@@ -88,6 +93,7 @@
 
 /* ** 3. User Profile **  */
 .github-profile {
+  display: flex;
   justify-content: flex-start;
   padding: 1.6rem 1.8rem 2rem 1.8rem;
   background-color: var(--light-blue);
@@ -186,6 +192,9 @@
 
 /* ** 7. Responsive Mobile View **  */
 @media (width <= 500px) {
+  .github-search {
+    padding: 0.5rem 1rem;
+  }
   .github-search,
   .search-form {
     max-width: 375px;
