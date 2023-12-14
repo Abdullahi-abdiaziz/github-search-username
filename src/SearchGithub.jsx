@@ -2,12 +2,23 @@ import React, { useState, useEffect } from "react";
 import "./github.css";
 function GitHubSearch() {
   const [username, setUsername] = useState("");
+  const [theme, setTheme] = useState("light");
   const [user, setUser] = useState({
     username: "",
     id: "",
     url: "",
     avatar_url: "",
   });
+
+  useEffect(() => {
+    if (theme === "light") {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    } else {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+    }
+  }, [theme]);
 
   const getUser = async (username) => {
     try {
@@ -39,8 +50,9 @@ function GitHubSearch() {
         following: userData.following,
         location: userData.location,
         portfolio: userData.blog,
-        linkedin: userData.linkedin,
+        company: userData.company,
         twitter: userData.twitter_username,
+        message: userData.message,
       });
     }
   };
@@ -57,8 +69,19 @@ function GitHubSearch() {
       <header className="search-header ">
         <h1 className="header__title">devFinder</h1>
         <div className="header__mode">
-          <span className="mode__type">LIGHT</span>
-          <span href="" className="icon-sun icon"></span>
+          <button
+            style={{ transition: ".3s ease" }}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          >
+            <span style={{ marginRight: ".5rem" }} className="mode__type">
+              {theme === "dark" ? "LIGHT" : "DARK"}
+            </span>
+            {theme === "dark" ? (
+              <span className="icon-sun icon"></span>
+            ) : (
+              <span className="icon-moon-o icon"></span>
+            )}
+          </button>
         </div>
       </header>
       <form className="search-form">
@@ -75,7 +98,7 @@ function GitHubSearch() {
         </button>
       </form>
 
-      {user.username && (
+      {user.username ? (
         <div className="github-profile">
           <div className="profile__avatar">
             <img
@@ -94,7 +117,9 @@ function GitHubSearch() {
               </div>
               <p className="profile__joined-date">Joined {formattedDate}</p>
             </div>
-            <p className="account__bio">{user.bio ? user.bio : "This profile has no bio"}</p>
+            <p className="account__bio">
+              {user.bio ? user.bio : "This profile has no bio"}
+            </p>
             <div className="account__status">
               <div className="account__repos">
                 <p>Repos</p>
@@ -122,13 +147,21 @@ function GitHubSearch() {
                 <span className="icon-link icon"></span>
                 <span>{user.portfolio ? user.portfolio : "Not Available"}</span>
               </div>
-              <div className={user.location ? "" : "light-clr"}>
-                <span className="icon-map-pin-fill icon"></span>
-                <span>{user.location ? user.location : "Not Available"}</span>
+              <div className={user.company ? "" : "light-clr"}>
+                <span className="icon-office icon"></span>
+                <span>{user.company ? user.company : "Not Available"}</span>
               </div>
             </div>
           </div>
         </div>
+      ) : (
+        <h3 style={{ margin: "2rem" }}>
+          <span
+            style={{ marginRight: "1rem", fontSize: "2rem", color: "red" }}
+            className={user.message ? "icon-warning" : ""}
+          ></span>
+          {user.message}
+        </h3>
       )}
     </div>
   );

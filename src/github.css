@@ -1,12 +1,14 @@
+
 /*
- ** ======== Content ===== /
+ ** ======== Content ======= /
  ** 1. Header
  ** 2. User Search bar
  ** 3. User profile
  ** 4. User Account 
  ** 5. User Repos & Followers
  ** 6. User Additional info
- ** =======================  /
+ ** 7. Responsive Mobile View
+ ** =========================  /
 */
 
 .github-search {
@@ -81,11 +83,14 @@
   outline: none;
 }
 
+.light .search-form .btn__form {
+  color: #fff;
+}
 .search-form .btn__form:hover {
   background-color: rgba(0, 110, 254, 0.75);
 }
 
-/* ** 2. User Profile **  */
+/* ** 3. User Profile **  */
 .github-profile {
   display: flex;
   justify-content: flex-start;
@@ -117,6 +122,7 @@
   margin-bottom: 1rem;
 }
 
+/* ** 4. User Account **  */
 .account__user .name__full {
   font-size: 0.9rem;
   font-weight: 600;
@@ -129,8 +135,8 @@
 }
 .account__user .profile__joined-date {
   font-size: 0.7rem;
-  font-weight: 300;
-  color: var(--light);
+  font-weight: 400;
+  color: var(--light-2);
   margin-left: 5rem;
 }
 
@@ -139,7 +145,7 @@
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }
-
+/* ** 5. User Repos and Followers **  */
 .profile__account .account__status {
   font-size: 0.7rem;
   display: flex;
@@ -157,7 +163,7 @@
   font-weight: 700;
   font-size: 0.8rem;
 }
-
+/* ** 6. User Additional info **  */
 .profile__account .account__info {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -181,6 +187,7 @@
   margin-right: 0.6rem;
 }
 
+/* ** 7. Responsive Mobile View **  */
 @media (width <= 500px) {
   .github-search,
   .search-form {

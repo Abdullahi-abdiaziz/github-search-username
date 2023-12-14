@@ -1,12 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap");
 
 :root {
   --dark-blue: rgb(20, 28, 47);
   --light-blue: rgb(31, 42, 72);
   --white: rgb(255, 255, 255);
-  --light:rgba(225, 225, 225 , 0.5);
-  --light-2:rgba(225, 225, 225 , 0.75);
+  --light: rgba(225, 225, 225, 0.5);
+  --light-2: rgba(225, 225, 225, 0.75);
   --accent: rgb(0, 112, 254);
+}
+
+.light {
+  --dark-blue: rgb(255, 255, 255); /* Light background color */
+  --light-blue: rgb(240, 240, 240); /* Lighter blue color for elements */
+  --white: rgb(20, 28, 47); /* Dark text color */
+  --light: rgba(20, 28, 47, 0.5); /* Semi-transparent dark color */
+  --light-2: rgba(20, 28, 47, 0.75); /* More transparent dark color */
+  --accent: rgb(0, 112, 254); /* Accent color */
 }
 
 * {
@@ -19,7 +28,10 @@ a {
   all: unset;
 }
 
-
+button {
+  all: unset;
+  cursor: pointer;
+}
 
 .bkg-dark {
   background-color: var(--dark-blue);
@@ -44,7 +56,7 @@ a {
 }
 
 html {
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: "IBM Plex Mono", sans-serif;
   font-size: 16px;
 }
 
@@ -55,4 +67,5 @@ body {
   align-items: center;
   background-color: var(--dark-blue);
   color: var(--white);
+  transition: .3s ease;
 }
