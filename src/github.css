@@ -37,7 +37,11 @@
 
 .mode__btn {
   align-items: center;
-  transition: ".3s ease";
+  transition: 0.1s ease;
+  letter-spacing: 1px;
+}
+.mode__btn button {
+  font-weight: 700;
 }
 
 /* ** 2. User Search Bar **  */
@@ -71,14 +75,16 @@
 }
 
 .search-form .btn__form {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   padding: 0.6rem 0.75rem;
   background-color: var(--accent);
   color: var(--white);
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1.5px;
   font-family: inherit;
   border-radius: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   cursor: pointer;
   border: none;
   outline: none;
@@ -108,10 +114,12 @@
 .github-profile .avatar__img {
   width: 60px;
   border-radius: 50%;
+  border: 1px solid var(--accent);
 }
 
 .github-profile .avatar__img:hover {
   opacity: 0.6;
+  border: 2px solid var(--accent);
 }
 
 .profile__account .account__user {

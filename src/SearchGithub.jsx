@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./github.css";
+
 function GitHubSearch() {
   const [username, setUsername] = useState("");
   const [theme, setTheme] = useState("light");
+
   const [user, setUser] = useState({
     username: "",
     id: "",
@@ -20,7 +22,7 @@ function GitHubSearch() {
     }
   }, [theme]);
 
-  const getUser = async (username) => {
+  const getUser = async (username) => { // instead username try by searching id
     try {
       const response = await fetch(`https://api.github.com/users/${username}`);
       if (!response.ok) {
@@ -41,6 +43,7 @@ function GitHubSearch() {
     if (userData) {
       setUser({
         username: userData.login,
+        id: userData.id,
         name: userData.name,
         bio: userData.bio,
         date: userData.created_at,
@@ -89,7 +92,7 @@ function GitHubSearch() {
         <input
           type="text"
           placeholder="search GitHub username..."
-          value={username}
+          value={username} 
           onChange={(e) => setUsername(e.target.value)}
           className="input__form"
         />
